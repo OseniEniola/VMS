@@ -31,7 +31,7 @@
 <jsp:include page="/WEB-INF/pages/menu.jsp"></jsp:include>
 
 	<c:if test="${param.act == 'wel' }">
-	<p>${wel }</p> 
+	<p>Welcome</p> 
 	</c:if>
 	<c:if test="${ex !=null }">
 	<p>${ex}</p> 

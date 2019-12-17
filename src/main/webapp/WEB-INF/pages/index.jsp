@@ -63,6 +63,10 @@
 
 	</head>
 	<body>
+	
+	<c:if test="${param.act=='add' }">
+		<p>New Employee Added Successfully</p>
+	</c:if>
 		
 	<div class="gtco-loader"></div>
 	
@@ -78,17 +82,7 @@
 					<div id="gtco-logo"><a href="index.html">VMS <em>.</em></a></div>
 				</div>
 				<div class="col-xs-8 text-right menu-1">
-					<ul>
-						<li><label for="search_bar">Search by:</label></li>
-						<li class="has-dropdown">
-							<input type="text" id="search_bar">
-							<ul class="dropdown">
-								<li><a href="#">Employee's Name</a></li>
-								<li><a href="#">Visitor's Name</a></li>
-								<li><a href="#">Employees's Department</a></li>
-								<li><a href="#">Meeting Details</a></li>
-							</ul>
-						</li>
+					
 						<s:url var="url_reg" value="/reg_form"></s:url>
 						<li><a href="${url_reg }">Register</a></li>
 						<li><a href="#">Help</a></li>

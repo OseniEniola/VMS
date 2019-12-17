@@ -53,8 +53,22 @@
 	
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	
+		<link rel="stylesheet" type="text/css" href="css/header.css">
+	
 </head>
 <body>
+<nav>
+	<div id="myHeader">
+		<ul>
+		<ul>
+						<li><a href="#">Help</a></li>
+					</ul>	
+		</ul>
+		<div class="vl"></div>
+	</div>
+	
+</nav>
 <header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(images/img_bg_2.jpg)">
 		<div class="overlay"></div>
 		<div class="gtco-container">
@@ -71,7 +85,7 @@
 											<h3>Sign Up Form</h3>
 											<s:url var="url_register" value="/register"></s:url>
 											
-											<f:form action="${url_register } modelAttribute="command" >
+											<f:form action="${url_register}" modelAttribute="command" >
 												<div class="row form-group">
 													<div class="col-md-12">
 														<label for="e_firstname">First Name</label>

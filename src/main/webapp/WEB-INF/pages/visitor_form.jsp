@@ -32,15 +32,6 @@
 	<div id="myHeader">
 		<ul>
 		<ul>
-						<li class="has-dropdown">
-							<ul class="dropdown">
-								<li><a href="#">Dashboard</a></li>
-								<li><a href="#">Visitor Management</a></li>
-								<li><a href="#">Employees Management</a></li>
-								<li><a href="#">Meeting Management</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Register</a></li>
 						<li><a href="#">Help</a></li>
 					</ul>	
 		</ul>
@@ -48,7 +39,6 @@
 	</div>
 	
 </nav>
-	
 	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">

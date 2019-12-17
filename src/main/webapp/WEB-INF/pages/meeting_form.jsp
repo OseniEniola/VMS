@@ -34,13 +34,11 @@
 		<ul>
 						<li class="has-dropdown">
 							<ul class="dropdown">
-								<li><a href="#">Dashboard</a></li>
 								<li><a href="#">Visitor Management</a></li>
 								<li><a href="#">Employees Management</a></li>
 								<li><a href="#">Meeting Management</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Register</a></li>
 						<li><a href="#">Help</a></li>
 					</ul>	
 		</ul>
@@ -48,7 +46,6 @@
 	</div>
 	
 </nav>
-	
 	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">
@@ -83,19 +80,19 @@
 						</tr>
 						<tr>
 						<td id="ul"><label for="Employee"><b><em>Employee(s)</em></b></label></td>
-						<td id="ul" style="border:2px solid black"><f:input  class="form-control" list="employess" name="employess" path="Employee.e_firstname"/></td>
+						<td id="ul" style="border:2px solid black"><f:input  class="form-control" list="employess"  path="Emp.e_firstname"/></td>
 						<datalist id="employess">
-						<c:forEach var="u" items="${employee }">
-						<option value="${u.e_firstname }  ${u.e_lastname}">
+						<c:forEach var="u" items="${empList}">
+						<option  value="${u.e_firstname } ${u.e_lastname}">
 						</c:forEach>
 						</datalist>
 						</tr>
 						<tr>
 						<td id="ul"><label for="Visitor"><b><em>Visitor(s)</em></b></label></td>
-						<td id="ul" style="border:2px solid black"><input  class="form-control" list="visitors" name="visitors" path="Visitor.v_firstname"/></td>
+						<td id="ul" style="border:2px solid black"><f:input  class="form-control" list="visitors" path="Vi.v_firstname"/></td>
 						<datalist id="visitors">
-						<c:forEach var="u" items="${visitor }">
-						<option value="${u.v_firstname }  ${u.v_lastname}">
+						<c:forEach var="u" items="${visitList}">
+						<option value="${u.v_firstname} ${u.v_lastname}">
 						</c:forEach>
 						</datalist>
 						</tr>

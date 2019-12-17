@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Table V01</title>
+	<title>Meeting Management</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 <!--===============================================================================================-->	
@@ -28,45 +28,61 @@
 <!--===============================================================================================-->
 </head>
 <body style="max-width:100%">
-	
-	<c:if test="${param.act == 'wel' }">
-	<p>${wel }</p> 
-	</c:if>
-	<c:if test="${ex !=null }">
-	<p>${ex}</p> 
-	</c:if>
-				
-<jsp:include page="/WEB-INF/pages/menu.jsp"></jsp:include>
+<nav>
+	<div id="myHeader">
+		<ul>
+		<ul>
+						<li class="has-dropdown">
+							<ul class="dropdown">
+								<li><a href="/visitor">Visitor Management</a></li>
+								<li><a href="/employee">Employees Management</a></li>
+								<li><a class="active" href="/meetingList">Meeting Management</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Register</a></li>
+						<li><a href="#">Help</a></li>
+					</ul>	
+		</ul>
+		<div class="vl"></div>
+	</div>	
+</nav>
+<s:url value="/add_meeting" var="url_meet"></s:url>
 	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">
 				<div class="table100">
-				<button class="button button1">Add New Employee</button>
-				<button class="button button2">Edit Employee Details</button>
-				<button class="button button3">Delete Selected Employee</button>
+				<button class="button button1" href="${url_meet}">Add New Meeting</button>
+				
 					<table>
 						<thead>
 							<tr class="table100-head">
 								<th class="column1">ID</th>
-								<th class="column2">First name</th>
-								<th class="column3">Last name</th>
-								<th class="column4">Email</th>
-								<th class="column5">Department</th>
-								<th class="column6">Phone no</th>
+								<th class="column2">Meeting Host</th>
+								<th class="column3">Meeting Purpose</th>
+								<th class="column4">Meeting Venue</th>
+								<th class="column5">Meeting Subject</th>
+								<th class="column3">Meeting Date</th>
+								<th class="column3">Meeting Start Time</th>
+								<th class="column3">Meeting End Time</th>
+								<th class="column3">Meeting Status</th>
+								
 							</tr>
 						</thead>
-						<c:forEach var="u" items="${emplist }">
+						<c:forEach var="u" items="${m_list }">
 								<tr>
-									<td class="column1">${u.e_Id}</td>
-									<td class="column2">${u.e_firstname}</td>
-									<td class="column3">${u.e_lastname}</td>
-									<td class="column4">${u.e_email}</td>
-									<td class="column5">${u.e_department}</td>
-									<td class="column6">${u.e_phone}</td>
+									<td class="column1">${u.m_id}</td>
+									<td class="column2">${u.m_host}</td>
+									<td class="column3">${u.m_purpose}</td>
+									<td class="column4">${u.m_venue}</td>
+									<td class="column5">${u.m_subject}</td>
+									<td class="column3">${u.m_date}</td>
+									<td class="column3">${u.m_start_time}</td>
+									<td class="column3">${u.m_end_time}</td>
+									<td class="column3">${u.m_status}</td>
 								</tr>
 								
 					</c:forEach>
-		</table>
+					</table>
 					
 				</div>
 			</div>

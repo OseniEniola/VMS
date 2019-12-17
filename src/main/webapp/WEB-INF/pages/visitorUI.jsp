@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Table V01</title>
+	<title>Visitor Management</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 <!--===============================================================================================-->	
@@ -34,28 +34,25 @@
 		<ul>
 						<li class="has-dropdown">
 							<ul class="dropdown">
-								<li><a href="#">Dashboard</a></li>
-								<li><a href="#">Visitor Management</a></li>
-								<li><a href="#">Employees Management</a></li>
-								<li><a href="#">Meeting Management</a></li>
+								<li><a class="active" href="/visitor">Visitor Management</a></li>
+								<li><a href="/employee">Employees Management</a></li>
+								<li><a href="/meetingList">Meeting Management</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Register</a></li>
-						<li><a href="#">Help</a></li>
+						<li><a href="/reg_visitor">Register</a></li>
+						<li><a href="https://verraki.africa/contact/">Help</a></li>
 					</ul>	
 		</ul>
 		<div class="vl"></div>
 	</div>
 	
 </nav>
-	
+<s:url var="reg_visit" value="/reg_visitor"></s:url>
 	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">
 				<div class="table100">
-				<button class="button button1">Add New Employee</button>
-				<button class="button button2">Edit Employee Details</button>
-				<button class="button button3">Delete Selected Employee</button>
+				<button class="button button1" href="${reg_visit }">Add New Visitor</button>
 					<table>
 						<thead>
 							<tr class="table100-head">

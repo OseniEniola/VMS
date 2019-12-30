@@ -28,24 +28,26 @@
 <!--===============================================================================================-->
 </head>
 <body style="max-width:100%">
-<nav>
-	<div id="myHeader">
-		<ul>
-		<ul>
-						<li class="has-dropdown">
-							<ul class="dropdown">
-								<li><a href="#">Visitor Management</a></li>
-								<li><a href="#">Employees Management</a></li>
-								<li><a href="#">Meeting Management</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Help</a></li>
-					</ul>	
-		</ul>
-		<div class="vl"></div>
-	</div>
+<jsp:include page="/WEB-INF/pages/menu.jsp"></jsp:include>
+
+<!-- <nav> -->
+<!-- 	<div id="myHeader"> -->
+<!-- 		<ul> -->
+<!-- 		<ul> -->
+<!-- 						<li class="has-dropdown"> -->
+<!-- 							<ul class="dropdown"> -->
+<!-- 								<li><a href="#">Visitor Management</a></li> -->
+<!-- 								<li><a href="#">Employees Management</a></li> -->
+<!-- 								<li><a href="#">Meeting Management</a></li> -->
+<!-- 							</ul> -->
+<!-- 						</li> -->
+<!-- 						<li><a href="#">Help</a></li> -->
+<!-- 					</ul>	 -->
+<!-- 		</ul> -->
+<!-- 		<div class="vl"></div> -->
+<!-- 	</div> -->
 	
-</nav>
+<!-- </nav> -->
 	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">

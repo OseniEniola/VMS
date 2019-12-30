@@ -61,6 +61,13 @@
 									<td class="column4">${u.e_email}</td>
 									<td class="column5">${u.e_department}</td>
 									<td class="column6">${u.e_phone}</td>
+									<s:url var="url_del" value="/emp/del_emp">
+							<s:param name="eid" value="${u.e_Id }"></s:param>
+						</s:url>
+						<s:url var="url_edit" value="/emp/edit_emp">
+							<s:param name="eid" value="${u.e_Id }"></s:param>
+						</s:url>
+						<td><a href="${url_edit }">EDIT</a>|<a href="${url_del }">DELETE</a> </td>
 								</tr>
 								
 					</c:forEach>

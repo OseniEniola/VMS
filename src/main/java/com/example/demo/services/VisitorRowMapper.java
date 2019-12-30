@@ -10,7 +10,7 @@ import com.example.demo.model.Visitor;
 public class VisitorRowMapper implements RowMapper<Visitor> {
  public Visitor mapRow(ResultSet rs, int rowNum) throws SQLException {
 	 Visitor v= new Visitor();
-	 v.setV_id(rs.getInt("v_id"));
+	 v.setVid(rs.getInt("vid"));
 	 v.setV_firstname(rs.getString("v_firstname"));
 	 v.setV_lastname(rs.getString("v_lastname"));
 	 v.setV_address(rs.getString("v_address"));

@@ -53,16 +53,24 @@
 								<th class="column4">Email</th>
 								<th class="column5">Department</th>
 								<th class="column6">Phone no</th>
+								<th class="colunm4">Action</th>
 							</tr>
 						</thead>
 						<c:forEach var="u" items="${emplist }">
 								<tr>
-									<td class="column1">${u.e_Id}</td>
+									<td class="column1">${u.eid}</td>
 									<td class="column2">${u.e_firstname}</td>
 									<td class="column3">${u.e_lastname}</td>
 									<td class="column4">${u.e_email}</td>
 									<td class="column5">${u.e_department}</td>
 									<td class="column6">${u.e_phone}</td>
+									<s:url var="url_del" value="/emp/del_emp">
+							<s:param name="eid" value="${u.eid }"></s:param>
+						</s:url>
+						<s:url var="url_edit" value="/emp/edit_emp">
+							<s:param name="eid" value="${u.eid }"></s:param>
+						</s:url>
+						<td><a href="${url_edit }">EDIT</a>|<a href="${url_del }">DELETE</a> </td>
 								</tr>
 								
 					</c:forEach>

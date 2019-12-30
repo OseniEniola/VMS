@@ -52,7 +52,7 @@
 		<div class="container-table100">
 			<div class="wrap-table100">
 				<div class="table100">
-				<button class="button button1" href="${reg_visit }">Add New Visitor</button>
+				<button class="button button1" onclick="parent.location='${reg_visit }'">Add New Visitor</button>
 					<table>
 						<thead>
 							<tr class="table100-head">
@@ -64,11 +64,12 @@
 								<th class="column6">Phone no</th>
 								<th class="column4">Address</th>
 								<th class="column4">Status</th>
+								<th class="column4">Action</th>
 							</tr>
 						</thead>
 						<c:forEach var="u" items="${v_list }">
 								<tr>
-									<td class="column1">${u.v_id}</td>
+									<td class="column1">${u.vid}</td>
 									<td class="column2">${u.v_firstname}</td>
 									<td class="column3">${u.v_lastname}</td>
 									<td class="column4">${u.v_email}</td>
@@ -76,6 +77,13 @@
 									<td class="column6">${u.v_phone}</td>
 									<td class="column4">${u.v_address}</td>
 									<td class="column4">${u.status}</td>
+									<s:url var="url_del" value="/visitor/del_visitor">
+							<s:param name="vid" value="${u.vid }"></s:param>
+						</s:url>
+						<s:url var="url_edit" value="/visitor/edit_visitor">
+							<s:param name="vid" value="${u.vid }"></s:param>
+						</s:url>
+						<td><a href="${url_edit }">EDIT</a>|<a href="${url_del }">DELETE</a> </td>
 								</tr>
 								
 					</c:forEach>

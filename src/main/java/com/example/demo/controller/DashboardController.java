@@ -1,6 +1,8 @@
 package com.example.demo.controller;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -33,12 +35,21 @@ public class DashboardController {
 		return "reg_form";
 	}
 	@RequestMapping("/register")
-	public String registerEmp(@ModelAttribute ("command") EmpCommand empCommand, Model m) {
-		Employee e=new Employee();
-		e=empCommand.getEmp();
-		e.setErole(es.ROLE_USER);
-		e_repo.save(e);
-		return "redirect:/vms?act=reg";
+	public String registerEmp(@ModelAttribute ("command") EmpCommand empCommand, Model m, HttpSession session) {
+		Integer eid= (Integer) session.getAttribute("e_id");
+		if(eid==null) {
+			Employee e=new Employee();
+			e=empCommand.getEmp();
+			e.setErole(es.ROLE_USER);
+			e_repo.save(e);
+			return "redirect:/vms?act=reg";
+		} else{
+			empCommand.getEmp().setEid(eid);
+			empCommand.getEmp().setErole(es.ROLE_USER);
+			e_repo.save(empCommand.getEmp());
+			return "redirect:/admin";
+		}
+	
 	}
 	@RequestMapping("/admin")
 	public String adminDashboard(Model m) {

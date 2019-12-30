@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class Visitor {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Integer v_id;
+	private Integer vid;
 private String v_firstname;
 private String v_phone;
 private String v_email;
@@ -19,11 +19,12 @@ private String v_img;
 private String v_company;
 private Integer status;
 
-public Integer getV_id() {
-	return v_id;
+
+public Integer getVid() {
+	return vid;
 }
-public void setV_id(Integer v_id) {
-	this.v_id = v_id;
+public void setVid(Integer vid) {
+	this.vid = vid;
 }
 public String getV_firstname() {
 	return v_firstname;

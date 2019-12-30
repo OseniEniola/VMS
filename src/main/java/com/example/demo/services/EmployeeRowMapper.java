@@ -12,7 +12,7 @@ public class EmployeeRowMapper implements RowMapper<Employee> {
 	
 	public Employee mapRow(ResultSet rs,int rowNum) throws SQLException {
 		Employee e= new Employee();
-		e.setE_Id(rs.getInt("e_id"));
+		e.setEid(rs.getInt("eid"));
 		e.setE_firstname(rs.getString("e_firstname"));
 		e.setE_lastname(rs.getString("e_lastname"));
 		e.setE_email(rs.getString("e_email"));

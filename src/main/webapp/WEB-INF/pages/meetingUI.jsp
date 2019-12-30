@@ -28,7 +28,9 @@
 <!--===============================================================================================-->
 </head>
 <body style="max-width:100%">
-<nav>
+
+
+ <nav>
 	<div id="myHeader">
 		<ul>
 		<ul>
@@ -45,13 +47,13 @@
 		</ul>
 		<div class="vl"></div>
 	</div>	
-</nav>
+</nav> 
 <s:url value="/add_meeting" var="url_meet"></s:url>
 	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">
 				<div class="table100">
-				<button class="button button1" href="${url_meet}">Add New Meeting</button>
+				<button class="button button1" onclick="parent.location='${url_meet}' ">Add New Meeting</button>
 				
 					<table>
 						<thead>

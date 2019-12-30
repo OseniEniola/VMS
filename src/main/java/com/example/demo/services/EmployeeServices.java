@@ -8,6 +8,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.dao.EmployeeRepo;
 import com.example.demo.exception.UserBlockedException;
 import com.example.demo.model.Employee;
 
@@ -23,7 +24,7 @@ public class EmployeeServices {
 	JdbcTemplate temp;
 
 	public Employee loginEmail(String username, String password) throws UserBlockedException {
-		String sql="SELECT e_id, e_email, e_department, e_firstname, e_password, e_lastname, e_phone, erole, e_img FROM employee WHERE e_email=? AND "
+		String sql="SELECT eid, e_email, e_department, e_firstname, e_password, e_lastname, e_phone, erole, e_img FROM employee WHERE e_email=? AND "
 				+ "e_password=?";
 		Map m= new HashMap();
 		m.put("e_email",username);
@@ -37,7 +38,7 @@ public class EmployeeServices {
 		
 	}
 	public Employee loginphone(String phone, String password) throws UserBlockedException {
-		String sql="SELECT e_id, e_email, e_department, e_firstname, e_password, e_lastname, e_phone, erole, e_img FROM employee WHERE e_phone=? AND "
+		String sql="SELECT eid, e_email, e_department, e_firstname, e_password, e_lastname, e_phone, erole, e_img FROM employee WHERE e_phone=? AND "
 				+ "e_password=?";
 		Map m= new HashMap();
 		m.put("e_phone",phone);
@@ -50,4 +51,5 @@ public class EmployeeServices {
 		}
 		
 	}
+	
 }

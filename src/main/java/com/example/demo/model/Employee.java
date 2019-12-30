@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class Employee {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-private Integer E_Id;
+	private Integer eid;
 	private String E_firstname;
 	private String E_lastname;
 	private String E_phone;
@@ -25,11 +25,12 @@ private Integer E_Id;
 	public void setE_password(String e_password) {
 		E_password = e_password;
 	}
-	public Integer getE_Id() {
-		return E_Id;
+	
+	public Integer getEid() {
+		return eid;
 	}
-	public void setE_Id(Integer e_Id) {
-		E_Id = e_Id;
+	public void setEid(Integer eid) {
+		this.eid = eid;
 	}
 	public String getE_firstname() {
 		return E_firstname;
